@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Function</title>
+    <style>
+        button {
+ width: 7em;
+ height: 3em;
+ border-radius: 30em;
+ font-size: 15px;
+ font-family: inherit;
+ border: none;
+ position: relative;
+ overflow: hidden;
+ z-index: 1;
+ box-shadow: 6px 6px 12px #c5c5c5,
+             -6px -6px 12px #ffffff;
+}
+
+button::before {
+ content: '';
+ width: 0;
+ height: 3em;
+ border-radius: 30em;
+ position: absolute;
+ top: 0;
+ left: 0;
+ background-image: linear-gradient(to right, #ff0000, #ff0046, #fa0082, #c400c4, #0013ff);
+ transition: .2s ease;
+ display: block;
+ z-index: -1;
+}
+
+button:hover::before {
+ width: 9em;
+}
+    </style>
+</head>
+<body>
+    <h1 id="heading"></h1>
+    <button onclick="heading.style.color=('red')" id="btn1">
+    </button>
+    <button onclick="heading.style.color=('blue')" id="btn2">
+    </button>
+</body>
+</html>
+<script>
+document.getElementById("heading").innerHTML=("Select Color");
+document.getElementById("btn1").innerHTML=("Red");
+document.getElementById("btn2").innerHTML=("Blue");
+
+</script>
